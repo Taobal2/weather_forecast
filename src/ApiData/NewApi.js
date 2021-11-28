@@ -22,7 +22,7 @@ const NewApi = () => {
     <Container>
       <Wrapper>
         {data?.map((props, i) => (
-          <Card key={i} to={`/detals/${i}`}>
+          <Card key={i} to={`/details/${i}`}>
             <Image src={props.image} />
             <Title>{props.title}</Title>
           </Card>

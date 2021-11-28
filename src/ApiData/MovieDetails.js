@@ -24,8 +24,9 @@ const MovieDetails = () => {
     <Container>
       <Wrapper>
         <Card>
-          <Image src={data.image} />
-          <Text>{data.title}</Text>
+          <Image src={data?.image} />
+          <Text>{data?.title}</Text>
+          <Desc>{data?.description}</Desc>
         </Card>
       </Wrapper>
     </Container>
@@ -33,6 +34,12 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
+
+const Desc = styled.div`
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+`;
 
 const Card = styled.div`
   width: 800px;
@@ -57,9 +64,9 @@ const Image = styled.img`
   width: 100%;
   height: 650px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0px 0px;
   background-color: teal;
-  //   flex: 1;
+  flex: 1;
 `;
 
 const Text = styled.div`
@@ -72,6 +79,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  background-color: black;
 `;
 
 const Wrapper = styled.div`
@@ -79,5 +87,4 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 `;

@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/api" element={<NewApi />} />
-        <Route path="/movieDetails/:id" element={<movieDetails />} />
+        <Route path="/details/:id" element={<movieDetails />} />
         <Route path="/weather" element={<Weather1 />} />
         <Route path="/firstapi" element={<Api />} />
       </Routes>
